@@ -1,5 +1,6 @@
 # VORP-Stores
-🛒 NPC Shops
+🛒 NPC Shops\
+Update for [MM_dynamicPrices](https://github.com/MartensMalsero/MM_dynamicPrices)
 
 ## Requirements
 - [VORP-Core](https://github.com/VORPCORE/VORP-Core/releases)
