@@ -1,5 +1,6 @@
 ﻿using CitizenFX.Core;
 using MenuAPI;
+using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -15,7 +16,7 @@ namespace vorpstores_cl.Menus
 
         private static bool setupDone = false;
 
-        private static void SetupMenu()
+        private static void SetupMenu(JObject AllcurrentPrices)
         {
             if (setupDone) return;
             setupDone = true;
@@ -94,9 +95,9 @@ namespace vorpstores_cl.Menus
         }
 
 
-        public static Menu GetMenu()
+        public static Menu GetMenu(JObject AllcurrentPrices)
         {
-            SetupMenu();
+            SetupMenu(AllcurrentPrices);
             return sellMenu;
         }
     }

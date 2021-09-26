@@ -43,7 +43,7 @@ namespace vorpstores_cl
             AllcurrentPrices = GetDynamics.AllcurrentPrices;
 
             await Delay(15000);
-            Menus.MainMenu.GetMenu();
+            Menus.MainMenu.GetMenu(AllcurrentPrices);
 
             foreach (var store in GetConfig.Config["Stores"])
             {

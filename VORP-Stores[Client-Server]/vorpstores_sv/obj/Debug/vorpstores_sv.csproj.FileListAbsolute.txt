@@ -28,3 +28,4 @@ C:\Users\Philipp\Source\Repos\VORP-Stores\VORP-Stores[Client-Server]\build\vorp_
 C:\Users\Philipp\Source\Repos\VORP-Stores\VORP-Stores[Client-Server]\vorpstores_sv\obj\Debug\vorpstores_sv.csproj.CoreCompileInputs.cache
 C:\Users\Philipp\Source\Repos\VORP-Stores\VORP-Stores[Client-Server]\vorpstores_sv\obj\Debug\vorpstores_sv.net.dll
 C:\Users\Philipp\Source\Repos\VORP-Stores\VORP-Stores[Client-Server]\vorpstores_sv\obj\Debug\vorpstores_sv.net.pdb
+C:\Users\Philipp\source\repos\VORP-Stores\VORP-Stores[Client-Server]\vorpstores_sv\obj\Debug\vorpstores_sv.csproj.CopyComplete
