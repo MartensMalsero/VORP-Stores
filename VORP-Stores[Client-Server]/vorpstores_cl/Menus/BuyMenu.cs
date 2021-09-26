@@ -48,6 +48,11 @@ namespace vorpstores_cl.Menus
 
             buyMenu.OnListItemSelect += (_menu, _listItem, _listIndex, _itemIndex) =>
             {
+
+                /* foreach AllCurrentPrices search for ItemName
+                 * GetConfig.Config["Stores"][StoreActions.LaststoreId]["ItemsBuy"][_itemIndex]["Name"].ToString();
+                 */
+
                 indexItem = _itemIndex;
                 quantityItem = _listIndex + 1;
                 double totalPrice = double.Parse(GetConfig.Config["Stores"][StoreActions.LaststoreId]["ItemsBuy"][_itemIndex]["BuyPrice"].ToString()) * quantityItem;
@@ -66,7 +71,19 @@ namespace vorpstores_cl.Menus
 
                 foreach (var item in GetConfig.Config["Stores"][StoreActions.LaststoreId]["ItemsBuy"])
                 {
-                    MenuListItem _itemToBuy = new MenuListItem(GetConfig.ItemsFromDB[item["Name"].ToString()]["label"].ToString() + $" ${item["BuyPrice"]}", quantityList, 0, "")
+
+                    string newPrice = "failed";
+
+                    foreach (var index in AllcurrentPrices)
+                    {
+                        if (JObject.Parse(index.Value.ToString())["item"].ToString() == item["Name"].ToString())
+                        {
+                            newPrice = JObject.Parse(index.Value.ToString())["buy"].ToString();
+                        }
+                    }
+
+                    //MenuListItem _itemToBuy = new MenuListItem(GetConfig.ItemsFromDB[item["Name"].ToString()]["label"].ToString() + $" ${item["BuyPrice"]}", quantityList, 0, "")
+                    MenuListItem _itemToBuy = new MenuListItem(GetConfig.ItemsFromDB[item["Name"].ToString()]["label"].ToString() + $" ${newPrice}", quantityList, 0, "")
                     {
 
                     };
