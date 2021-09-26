@@ -15,3 +15,8 @@ D:\[VORP]\VORP-Stores\VORP-Stores[Client-Server]\vorpstores_cl\obj\Debug\vorpsto
 D:\[VORP]\VORP-Stores\VORP-Stores[Client-Server]\vorpstores_cl\obj\Debug\vorpstores_cl.csproj.CoreCompileInputs.cache
 D:\[VORP]\VORP-Stores\VORP-Stores[Client-Server]\vorpstores_cl\obj\Debug\vorpstores_cl.net.dll
 D:\[VORP]\VORP-Stores\VORP-Stores[Client-Server]\vorpstores_cl\obj\Debug\vorpstores_cl.net.pdb
+C:\Users\Philipp\Source\Repos\VORP-Stores\VORP-Stores[Client-Server]\build\vorp_stores\vorpstores_cl.net.dll
+C:\Users\Philipp\Source\Repos\VORP-Stores\VORP-Stores[Client-Server]\build\vorp_stores\vorpstores_cl.net.pdb
+C:\Users\Philipp\Source\Repos\VORP-Stores\VORP-Stores[Client-Server]\vorpstores_cl\obj\Debug\vorpstores_cl.csproj.CoreCompileInputs.cache
+C:\Users\Philipp\Source\Repos\VORP-Stores\VORP-Stores[Client-Server]\vorpstores_cl\obj\Debug\vorpstores_cl.net.dll
+C:\Users\Philipp\Source\Repos\VORP-Stores\VORP-Stores[Client-Server]\vorpstores_cl\obj\Debug\vorpstores_cl.net.pdb

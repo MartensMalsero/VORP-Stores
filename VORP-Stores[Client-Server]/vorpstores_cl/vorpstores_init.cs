@@ -1,5 +1,7 @@
 ﻿using CitizenFX.Core;
 using CitizenFX.Core.Native;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -10,13 +12,36 @@ namespace vorpstores_cl
     {
         public static List<int> StoreBlips = new List<int>();
         public static List<int> StorePeds = new List<int>();
+
+        public static JObject AllcurrentPrices = new JObject();
+
         public vorpstores_init()
         {
             Tick += onStore;
+
+            API.RegisterCommand("test", new Action<int, List<object>, string>(async (source, args, raw) =>
+            {
+                await GetDynamics.GetSingleCurrentPrices(args[0].ToString());
+
+                if (args[1].ToString() == "false")
+                {
+                    foreach (var i in GetDynamics.currentPrices)
+                    {
+                        Debug.WriteLine("DEBUG: " + i);
+                    }
+                } else
+                {
+                    Debug.WriteLine("DEBUG: " + GetDynamics.currentPrices["buy"]);
+                }
+
+            }), false);
         }
 
         public static async Task InitStores()
         {
+            await GetDynamics.GetAllCurrentPrices();
+            AllcurrentPrices = GetDynamics.AllcurrentPrices;
+
             await Delay(15000);
             Menus.MainMenu.GetMenu();
 

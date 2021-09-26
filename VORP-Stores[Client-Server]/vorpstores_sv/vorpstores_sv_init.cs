@@ -1,5 +1,7 @@
 ﻿using CitizenFX.Core;
+using CitizenFX.Core.Native;
 using System;
+using System.Collections.Generic;
 
 namespace vorpstores_sv
 {
@@ -13,6 +15,13 @@ namespace vorpstores_sv
             TriggerEvent("getCore", new Action<dynamic>((dic) => {
                 CORE = dic;
             }));
+
+            API.RegisterCommand("test_sv", new Action<int, List<object>, string>(async (source, args, raw) =>
+            {
+                TriggerEvent($"{API.GetCurrentResourceName()}:test_sv");
+
+            }), false);
+
         }
         private void buyItems([FromSource]Player source, string name, int quantity, double cost)
         {
