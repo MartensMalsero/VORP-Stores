@@ -82,6 +82,35 @@ namespace vorpstores_cl.Menus
                         }
                     }
 
+
+                    /*
+                     * Something like that may be needed here instead of "MenuListItem _itemToBuy = new MenuListItem..."
+                     * 
+                        MenuDynamicListItem playerOutfit = new MenuDynamicListItem("Select Outfit", "0", new MenuDynamicListItem.ChangeItemCallback((item, left) =>
+                        {
+                            if (int.TryParse(item.CurrentItem, out int val))
+                            {
+                                int newVal = val;
+                                if (left)
+                                {
+                                    newVal--;
+                                    if (newVal < 0)
+                                    {
+                                        newVal = 0;
+                                    }
+                                }
+                                else
+                                {
+                                    newVal++;
+                                }
+                                SetPedOutfitPreset(PlayerPedId(), newVal, 0);
+                                return newVal.ToString();
+                            }
+                            return "0";
+                        }), "Select a predefined outfit for this ped. Outfits are made by Rockstar. Note the selected value can go up indefinitely because we don't know how to check for the max amount of outfits yet, so more native research is needed.");
+                    */
+
+
                     //MenuListItem _itemToBuy = new MenuListItem(GetConfig.ItemsFromDB[item["Name"].ToString()]["label"].ToString() + $" ${item["BuyPrice"]}", quantityList, 0, "")
                     MenuListItem _itemToBuy = new MenuListItem(GetConfig.ItemsFromDB[item["Name"].ToString()]["label"].ToString() + $" ${newPrice}", quantityList, 0, "")
                     {
